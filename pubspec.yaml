@@ -13,6 +13,7 @@ dependencies:
   dartz: ^0.10.1
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.0.1
   freezed: ^2.0.3+1
   freezed_annotation: ^2.0.3
   surf_lint_rules: ^1.5.0
