@@ -5,8 +5,12 @@ import 'package:notes_firebase_ddd_course/domain/core/failures.dart';
 
 @immutable
 abstract class ValueObject<T> {
-  const ValueObject();
   Either<ValueFailure<T>, T> get value;
+
+  @override
+  int get hashCode => value.hashCode;
+
+  const ValueObject();
 
   @override
   bool operator ==(Object other) {
@@ -14,9 +18,6 @@ abstract class ValueObject<T> {
 
     return other is ValueObject<T> && other.value == value;
   }
-
-  @override
-  int get hashCode => value.hashCode;
 
   @override
   String toString() => 'Value($value)';
