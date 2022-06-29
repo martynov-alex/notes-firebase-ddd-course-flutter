@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:notes_firebase_ddd_course/domain/core/errors.dart';
 import 'package:notes_firebase_ddd_course/domain/core/failures.dart';
 
 @immutable
@@ -23,4 +24,7 @@ abstract class ValueObject<T> {
   String toString() => 'Value($value)';
 
   bool isValid() => value.isRight();
+
+  /// Кидает [UnexpectedValueError] содержащую [ValueFailure]
+  T getOrCrash() => value.fold((f) => throw UnexpectedValueError(f), id); // id это аналог функции (r) => r;
 }
