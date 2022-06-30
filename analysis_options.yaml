@@ -2,3 +2,4 @@ include: package:surf_lint_rules/analysis_options.yaml
 
 linter:
   rules:
+    comment_references: false
