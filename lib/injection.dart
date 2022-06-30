@@ -3,7 +3,7 @@ import 'package:injectable/injectable.dart';
 
 import 'package:notes_firebase_ddd_course/injection.config.dart';
 
-final getIt = GetIt.instance;
+final GetIt getIt = GetIt.instance;
 
 @InjectableInit(
   initializerName: r'$initGetIt', // default
