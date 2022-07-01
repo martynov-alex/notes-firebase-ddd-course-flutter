@@ -24,6 +24,7 @@ dependencies:
   get_it: ^7.2.0
   google_sign_in: ^5.3.3
   injectable: ^1.5.3
+  kt_dart: ^0.10.0
   surf_lint_rules: ^1.5.0
   uuid: ^3.0.6
 
