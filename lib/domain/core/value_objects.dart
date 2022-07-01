@@ -12,6 +12,10 @@ abstract class ValueObject<T> {
   @override
   int get hashCode => value.hashCode;
 
+  Either<ValueFailure<dynamic>, Unit> get failureOrUnit {
+    return value.fold((f) => left(f), (r) => right(unit));
+  }
+
   const ValueObject();
 
   @override
