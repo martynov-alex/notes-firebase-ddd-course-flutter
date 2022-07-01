@@ -24,7 +24,7 @@ class SignInForm extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  behavior: SnackBarBehavior.floating,
+                  behavior: SnackBarBehavior.fixed,
                 ),
               );
             },
