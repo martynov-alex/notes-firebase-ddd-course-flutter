@@ -17,7 +17,7 @@ class SplashPage extends StatelessWidget {
             context.router.replace(const SignInPageRoute());
           },
           authenticated: (_) {
-            debugPrint("I'm authenticated");
+            context.router.replace(const SignInPageRoute());
           },
         );
       },
