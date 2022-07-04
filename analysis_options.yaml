@@ -4,3 +4,9 @@ linter:
   rules:
     comment_references: false
     unnecessary_lambdas: false
+
+analyzer:
+  exclude:
+    - lib/**/*.freezed.dart
+    - lib/**/*.config.dart
+    - lib/**/*.g.dart
